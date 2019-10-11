@@ -16,7 +16,13 @@ export const fetchSmurfs = () => dispatch => {
       .catch(err => dispatch({ type: FETCH_FAILURE, payload: err.response}))
   };
   
-  export const addSmurf = (smurf) => dispatch => {
+export const addSmurf = (smurf) => {
       axios
         .post(`http://localhost:3333/smurfs`, smurf)
   }
+
+export const deleteSmurf = (smurf) => {
+    axios
+    .delete(`http://localhost:3333/smurfs/${smurf.id}`, smurf)
+    .then(res => console.log(res))
+}

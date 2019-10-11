@@ -6,9 +6,8 @@ import { ENGINE_METHOD_DIGESTS } from 'constants';
 const Smurf = props => {
     console.log(props, 'smurf props')
 
-
-    const handleDelete = (e) => {
-        props.deleteSmurf(props.smurf)
+    const handleDelete = (id) => {
+        props.deleteSmurf(id).then(() => window.location.reload())
 
     }
     return (
@@ -16,7 +15,7 @@ const Smurf = props => {
             <h1>{props.smurf.name}</h1>
             <h5>Age: {props.smurf.age}</h5>
             <h5>Height: {props.smurf.height}</h5>
-            <button onClick={handleDelete}>Delete Smurf</button>
+            <button onClick={() => handleDelete(props.smurf.id)}>Delete Smurf</button>
         </div>
     )
 }

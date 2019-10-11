@@ -3,6 +3,7 @@ import axios from 'axios';
 export const START_FETCHING = 'START_FETCHING';
 export const FETCH_SUCCESS = "FETCH_SUCCESS";
 export const FETCH_FAILURE = "FETCH_FAILURE";
+export const DELETE_SMURF = 'DELETE_SMURF';
 
 export const fetchSmurfs = () => dispatch => {
     dispatch({ type: START_FETCHING });
@@ -21,6 +22,9 @@ export const addSmurf = (smurf) => dispatch => {
   }
 
 export const deleteSmurf = (smurf) => dispatch => {
-    axios
-    .delete(`http://localhost:3333/smurfs/${smurf.id}`, smurf)
+    console.log(smurf, 'smurf in request')
+    return axios
+    .delete(`http://localhost:3333/smurfs/${smurf}`)
+    .then(res => console.log(res))
 }
+

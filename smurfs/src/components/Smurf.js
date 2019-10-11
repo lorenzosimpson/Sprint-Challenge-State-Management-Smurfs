@@ -8,7 +8,8 @@ const Smurf = props => {
 
 
     const handleDelete = (e) => {
-        props.deleteSmurf(props.smurf);
+        props.deleteSmurf(props.smurf)
+
     }
     return (
         <div className='smurf'>
@@ -23,6 +24,7 @@ const Smurf = props => {
 const mapStateToProps = state => {
     return {
         smurfs: state.smurfs,
+        isFetching: state.isFetching
     }
 }
 

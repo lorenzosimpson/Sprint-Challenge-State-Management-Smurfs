@@ -3,7 +3,7 @@ import Smurfs from './Smurfs';
 import Form from './Form';
 
 
-import "./App.css";
+import "../sass/index.scss";
 class App extends Component {
 
   render() {

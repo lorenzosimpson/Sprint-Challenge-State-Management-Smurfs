@@ -1,13 +1,14 @@
 import React from 'react'
 import { connect } from 'react-redux';
 import { deleteSmurf } from '../actions';
+import { ENGINE_METHOD_DIGESTS } from 'constants';
 
 const Smurf = props => {
     console.log(props, 'smurf props')
 
 
-    const handleDelete = () => {
-        props.deleteSmurf(props.smurf)
+    const handleDelete = (e) => {
+        props.deleteSmurf(props.smurf);
     }
     return (
         <div className='smurf'>
@@ -25,4 +26,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, { deleteSmurf})(Smurf)
+export default connect(mapStateToProps, { deleteSmurf })(Smurf)

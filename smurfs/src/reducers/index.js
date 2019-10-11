@@ -26,12 +26,6 @@ export const reducer = (state = initialState, action) => {
                 isFetching: false,
                 error: action.payload,
             }
-        case DELETE_SMURF:
-            return {
-                ...state,
-                isFetching: true,
-                smurfs: action.payload
-            }
         default:
             return state;
     }

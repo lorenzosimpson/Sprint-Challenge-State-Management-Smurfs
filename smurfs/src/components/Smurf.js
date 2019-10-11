@@ -1,13 +1,14 @@
 import React from 'react'
 import { connect } from 'react-redux';
 import { deleteSmurf } from '../actions';
-import { ENGINE_METHOD_DIGESTS } from 'constants';
+
 
 const Smurf = props => {
     console.log(props, 'smurf props')
 
     const handleDelete = (id) => {
         props.deleteSmurf(id).then(() => window.location.reload())
+        
 
     }
     return (

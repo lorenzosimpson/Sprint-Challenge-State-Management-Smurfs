@@ -1,9 +1,11 @@
 import axios from 'axios';
+import { Action } from 'rxjs/internal/scheduler/Action';
 
 export const START_FETCHING = 'START_FETCHING';
 export const FETCH_SUCCESS = "FETCH_SUCCESS";
 export const FETCH_FAILURE = "FETCH_FAILURE";
-export const DELETE_SMURF = 'DELETE_SMURF';
+
+
 
 export const fetchSmurfs = () => dispatch => {
     dispatch({ type: START_FETCHING });
@@ -22,9 +24,7 @@ export const addSmurf = (smurf) => dispatch => {
   }
 
 export const deleteSmurf = (smurf) => dispatch => {
-    console.log(smurf, 'smurf in request')
-    return axios
+  return axios
     .delete(`http://localhost:3333/smurfs/${smurf}`)
-    .then(res => console.log(res))
 }
 

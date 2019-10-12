@@ -1,4 +1,4 @@
-import { START_FETCHING, FETCH_SUCCESS, FETCH_FAILURE, DELETE_SMURF } from '../actions';
+import { START_FETCHING, FETCH_SUCCESS, FETCH_FAILURE } from '../actions';
 
 export const initialState = {
     smurfs: [],

@@ -10,7 +10,7 @@ const Smurfs = () => {
     return (
         <div className='smurfs'>
             {smurfs.map(smurf => (
-                <Smurf name={smurf.name}/>
+                <Smurf name={smurf.name} age={smurf.age} height={smurf.height} id={smurf.id}/>
             ))}
             
         </div>

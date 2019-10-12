@@ -5,6 +5,7 @@ import "./App.css";
 import SmurfContext from '../contexts';
 
 import Smurfs from './Smurfs';
+import Form from './Form';
 
 
 
@@ -19,11 +20,13 @@ const App = () => {
       setSmurfs(res.data)
       })
   }, [])
+
   
 
     return (
       <div className="App">
         <SmurfContext.Provider value={{smurfs}}>
+            <Form />
             <Smurfs />
         </SmurfContext.Provider>
       </div>

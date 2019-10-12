@@ -7,7 +7,6 @@ const Form = props => {
     
     const handleChanges = e => {
         setNewSmurf({...newSmurf, [e.target.name]: e.target.value})
-        console.log(newSmurf)
     }
 
     const addSmurf = (newSmurf) => {
@@ -20,10 +19,7 @@ const Form = props => {
         addSmurf(newSmurf)
     }
 
-    
 
-
-  console.log(newSmurf)
     return (
         <div className='form-container'>
             <form>

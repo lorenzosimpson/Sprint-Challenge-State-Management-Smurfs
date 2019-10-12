@@ -5,7 +5,6 @@ import SmurfContext from '../contexts';
 const Smurfs = () => {
 
     const {smurfs} = useContext(SmurfContext)
-    console.log(smurfs)
 
     return (
         <div className='smurfs'>

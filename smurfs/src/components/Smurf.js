@@ -9,9 +9,6 @@ const Smurf = (props) => {
         .then(window.location.reload())
     }
 
-    console.log(props, 'smurf props')
-
-
     return (
         <div className='smurf'>
             <h4>{props.name}</h4>

@@ -1,0 +1,11 @@
+@import 'App.scss';
+@import 'form.scss';
+@import 'smurfs.scss';
+
+body {
+    background-image: url('https://bit.ly/2OR8nMK');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(238, 238, 238, 0.81);
+  background-blend-mode: lighten;
+}
